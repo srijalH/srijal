@@ -1,0 +1,2 @@
+# srijal
+static personal website
