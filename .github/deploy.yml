@@ -24,7 +24,7 @@ jobs:
         with:
           node-version: 20
           cache: "pnpm"
-      - run: pnpm install --frozen-lockfile=false
+      - run: pnpm install --frozen-lockfile=false --ignore-scripts
         env:
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
       - run: pnpm build
