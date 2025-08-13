@@ -51,7 +51,7 @@ const paginationProps = {
 
 <PageLayout meta={meta}>
   <h1 class="title text-xl mb-6 flex items-center">
-    <a href="/tags/" class="opacity-70 hover:cactus-link hover:opacity-100">All Tags</a>
+    <a href={`${import.meta.env.BASE_URL}tags/`} class="opacity-70 hover:cactus-link hover:opacity-100">All Tags</a>
     <span class="me-3 ms-2">/</span>
     <span class="capitalize">{tag}</span>
   </h1>

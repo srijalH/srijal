@@ -22,7 +22,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, 5);
   <section aria-label="Blog post list" class="mt-16">
     <h2 class="title mb-4 text-xl">
       Recent Posts /
-      <a href="/posts" class="opacity-70 hover:cactus-link hover:opacity-100" data-astro-prefetch
+      <a href={`${import.meta.env.BASE_URL}posts`} class="opacity-70 hover:cactus-link hover:opacity-100" data-astro-prefetch
         >All Posts</a
       >
     </h2>
