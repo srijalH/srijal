@@ -12,8 +12,7 @@
     "postbuild": "pagefind --site dist",
     "preview": "astro preview",
     "format": "prettier -w --cache . && prettier -w --cache **/*.astro",
-    "check": "astro check",
-    "postinstall": "pnpx playwright-core install --with-deps chromium"
+    "check": "astro check"
   },
   "dependencies": {
     "@astrojs/mdx": "2.0.0",
