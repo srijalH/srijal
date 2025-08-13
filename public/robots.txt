@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://srijalh.github.io/sitemap-index.xml
+Sitemap: https://srijalh.github.io/srijal/sitemap-index.xml
