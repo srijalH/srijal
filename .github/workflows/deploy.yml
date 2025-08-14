@@ -20,11 +20,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
+        with:
+          version: 8
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: "pnpm"
-      - run: pnpm install --frozen-lockfile=false --ignore-scripts
+          cache-dependency-path: pnpm-lock.yaml
+      - name: Ensure pnpx is available
+        run: |
+          echo '#!/usr/bin/env bash' | sudo tee /usr/local/bin/pnpx >/dev/null
+          echo 'pnpm dlx "$@"' | sudo tee -a /usr/local/bin/pnpx >/dev/null
+          sudo chmod +x /usr/local/bin/pnpx
+      - run: pnpm install --frozen-lockfile=false
         env:
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
       - run: pnpm build
